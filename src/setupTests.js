@@ -27,6 +27,7 @@ test('Animal form accepts text in the form  fields', ()=> {
 
     // click submit button
     const submitButton = screen.getByAltText(/submit/i);
+    // fireEvent.click(submitButton); // clicks the button we've defined
 })
 
 
