@@ -13,6 +13,20 @@ test('Animal form accepts text in the form  fields', ()=> {
 
 
     const firstNameInput = screen.getByLabelText(/First Name*/i);
+    const lastnameInput = screen.getByLabelText(/Last Name*/i);
+    const emailInput = screen.getByLabelText(/Email*/i);
+    const messageInput = screen.getByLabelText(/Message*/i);
+
+    // events with React testing library -- fireEvent
+    fireEvent.change(firstNameInput, { target: {value: 'Erick'} });
+    fireEvent.change(lastnameInput, { target: {value: 'Gonzalez'} });
+    fireEvent.change(emailInput, { target: {value: 'erickgonzalez@outlook.com'} });
+    fireEvent.change(messageInput, { target: {value: 'I like turtles'} });
+
+
+
+    // click submit button
+    const submitButton = screen.getByAltText(/submit/i);
 })
 
 
